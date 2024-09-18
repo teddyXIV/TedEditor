@@ -1,0 +1,4 @@
+C:\Users\teddy\OneDrive\Desktop\TedEditor\src\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\teddy\OneDrive\Desktop\TedEditor\src\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\teddy\OneDrive\Desktop\TedEditor\src\obj\Debug\net8.0-windows\TedEditor_MarkupCompile.cache
+C:\Users\teddy\OneDrive\Desktop\TedEditor\src\obj\Debug\net8.0-windows\TedEditor_MarkupCompile.lref

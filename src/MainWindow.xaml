@@ -21,6 +21,5 @@
                           Click="Exit_Click"/>
             </MenuItem>
         </Menu>
-        <RichTextBox Name="tedEditor"/>
     </DockPanel>
 </Window>
