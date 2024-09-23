@@ -21,5 +21,8 @@
                           Click="Exit_Click"/>
             </MenuItem>
         </Menu>
+        <Canvas Name="tedEditor"
+                Background="Black"
+                Focusable="True"/>
     </DockPanel>
 </Window>
