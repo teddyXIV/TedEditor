@@ -2,9 +2,9 @@ namespace TedEditor.Models
 {
   public class RopeNode
   {
-    public string Data { get; private set; }
-    public RopeNode Left { get; private set; }
-    public RopeNode Right { get; private set; }
+    public string? Data { get; private set; }
+    public RopeNode? Left { get; private set; }
+    public RopeNode? Right { get; private set; }
     public int Weight { get; private set; }
 
     public RopeNode(string data)

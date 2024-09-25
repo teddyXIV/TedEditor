@@ -11,35 +11,20 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
 
-namespace TedEditor;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window
+/// 
+
+namespace TedEditor.Views
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-    }
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
-    private void NewFile_Click(object sender, RoutedEventArgs e)
-    {
-        tedEditor.Document.Blocks.Clear();
-    }
-
-    private void OpenFile_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-
-    private void SaveFile_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-
-    private void Exit_Click(object sender, RoutedEventArgs e)
-    {
-        Application.Current.Shutdown();
     }
 }
