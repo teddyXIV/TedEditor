@@ -13,6 +13,7 @@ namespace TedEditor.Models
     }
 
     public void MoveLeft() => PositionX = Math.Max(0, PositionX - 1);
-    public void MoveRight(int textLength) => PositionX = Math.Min(textLength, PositionX + 1);
+    // public void MoveRight(int textLength) => PositionX = Math.Min(textLength, PositionX + 1);
+    public void MoveRight() => PositionX += 1;
   }
 }

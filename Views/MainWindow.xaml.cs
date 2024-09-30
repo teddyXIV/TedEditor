@@ -12,6 +12,7 @@ using Microsoft.Win32;
 using System.IO;
 using TedEditor.Models;
 using System.Windows.Threading;
+using TedEditor.Services;
 
 
 /// <summary>
@@ -25,12 +26,15 @@ namespace TedEditor.Views
     {
         private Caret caret;
         private Rectangle visibleCaret;
-        private DispatcherTimer caretBlinker;
+        private readonly DispatcherTimer caretBlinker;
+        private CaretService caretService;
         public MainWindow()
         {
             InitializeComponent();
 
-            caret = new(0, 0);
+            caret = new(10, 10);
+
+            caretService = new(caret);
 
             visibleCaret = new()
             {
@@ -46,6 +50,7 @@ namespace TedEditor.Views
 
 
             tedEditor.Children.Add(visibleCaret);
+            UpdateVisibleCaretPostion();
         }
 
         private void OnCaretBlink(object sender, EventArgs e)
@@ -53,6 +58,18 @@ namespace TedEditor.Views
             visibleCaret.Visibility = visibleCaret.Visibility == Visibility.Visible
                 ? Visibility.Hidden
                 : Visibility.Visible;
+        }
+
+        private void UpdateVisibleCaretPostion()
+        {
+            Canvas.SetLeft(visibleCaret, caret.PositionX);
+            Canvas.SetTop(visibleCaret, caret.PositionY);
+        }
+
+        private void EditorKeyDown(object sender, KeyEventArgs e)
+        {
+            caretService.HandleKeyDown(e);
+            UpdateVisibleCaretPostion();
         }
 
     }
